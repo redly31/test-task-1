@@ -10,17 +10,20 @@ import TableHeads from "../components/TableHeads";
 import TableRows from "../components/TableRows";
 import { useGetReposQuery } from "../store/reposApi";
 import { useAppSelector } from "../hooks/redux";
+import { useSort } from "../hooks/useSort";
 
 export default function Main() {
   const search = useAppSelector(state => state.pagination.search)
   const limit = useAppSelector(state => state.pagination.limit)
   const page = useAppSelector(state => state.pagination.page)
+  const [sortType, setSortType] = useState<string>("")
   const {data, isSuccess} = useGetReposQuery({search, limit, page}, {skip: search === ''});
   const [repo, setRepo] = useState<IRepo | null>(null);
   const repos: IRepo[] | undefined = data?.items
   const totalCount: number | undefined = data?.total_count
+  const sortedRepos = useSort(repos, sortType)
 
-  console.log(data)
+  console.log(sortedRepos)
 
   if(!isSuccess) {
     return <Welcome/>
@@ -32,9 +35,9 @@ export default function Main() {
         <div className="">
           <h1 className="main__title">Результаты поиска</h1>
           <Table>
-            <TableHeads/>
+            <TableHeads setSortType={setSortType} sortType={sortType}/>
             <TableBody>
-              {repos?.map((item: IRepo) => (
+              {sortedRepos?.map((item: IRepo) => (
                 <TableRows key={item.id} item={item} setRepo={setRepo}/>
               ))}
             </TableBody>

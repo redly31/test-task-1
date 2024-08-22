@@ -1,5 +1,5 @@
 import { ITableHeads } from "../types/TableHeads";
-
+//заголовки таблицы
 export const tableHeads: ITableHeads[] = [
     { name: "Название", sortType: "" },
     { name: "Язык", sortType: "" },

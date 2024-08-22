@@ -1,9 +1,11 @@
+// интерфейс получаемых данных с сервера
 export interface Payload {
   total_count: number;
   items: IRepo[];
   incomplete_results: true;
 }
 
+// интерфейс репозитория
 export interface IRepo {
   allow_forking: boolean;
   archive_url: string;
