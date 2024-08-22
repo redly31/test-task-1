@@ -1,0 +1,14 @@
+@import '/src/app/variables.scss';
+
+.welcome {
+    color: $tertiary-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .welcome__text {
+        font-size: 46px;
+        font-weight: 400;
+    }
+}

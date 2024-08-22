@@ -1,0 +1,52 @@
+@import "/src/app/variables.scss";
+
+.sidebar {
+    width: 480px;
+    background-color: #F2F2F2;
+    position: relative;
+    height: calc(100vh - 32px - 99px);
+    margin-left: 16px;
+
+    .sidebar__repository {
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        .sidebar__repository__title {
+            font-weight: 400;
+            font-size: 32px;
+        }
+        .sidebar__repository__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .sidebar__repository__language {
+                background-color: $primary-color;
+                color: white;
+                padding: 7px 10px;
+                font-size: 13px;
+                border-radius: 100px;
+            }
+            .sidebar__repository__stars {
+                gap: 5px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .sidebar__title__wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .sidebar__title {
+            font-size: 14px;
+            font-weight: 400;
+            color: #4F4F4F;
+        }
+
+    }
+
+    
+}

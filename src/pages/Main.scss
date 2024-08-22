@@ -1,0 +1,13 @@
+.main {
+    
+    .main__title {
+        font-size: 48px;
+        font-weight: 400;
+    }
+
+    .main__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}

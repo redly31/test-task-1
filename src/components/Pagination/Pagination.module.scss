@@ -1,0 +1,43 @@
+.pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 16px;
+
+
+    .pagination__inner {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        .rows__select__wrapper {
+            display: flex;
+            align-items: center;
+            .rows__select__title {
+                margin-right: 8px;
+                color: #00000099;
+                font-weight: 400;
+                font-size: 12px;
+            }
+            .rows__select {
+                font-size: 12px;
+            }
+        }
+
+        .current__page__title {
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        .pagination__buttons {
+            align-items: center;
+            display: flex;
+            .pagination__button {
+                width: 48px;
+                height: 48px;
+                color: #0000008F;
+                background: white;
+            }
+        }
+    }
+}

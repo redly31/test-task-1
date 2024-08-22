@@ -1,0 +1,12 @@
+@import "/src/app/variables.scss";
+
+.navigation {
+    padding: 32px 19px;
+    background: $secondary-color;
+    display: flex;
+    gap: 10px;
+}
+
+::placeholder {
+    font-style: italic;
+}

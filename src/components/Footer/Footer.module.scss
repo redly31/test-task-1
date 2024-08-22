@@ -1,0 +1,9 @@
+@import '/src/app/variables.scss';
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background:  $tertiary-color;
+    height: 32px;
+}
